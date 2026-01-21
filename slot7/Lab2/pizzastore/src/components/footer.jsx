@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="footer">
-      <p>© 2025 Pizza House. All Rights Reserved.</p>
+      <p>Thái Sơn - 2026 | Email: nguyenvana@example.com | Phone: 0123-456-789</p>
     </footer>
   );
 }
