@@ -1,17 +1,24 @@
-import logo from './logo.svg';
+
 import './App.css';
-import React from 'react';
-import Bootstrap from 'bootstrap/dist/css/bootstrap.min.css';
-import ProductQuantity from './Component/ProductQuantity';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navigation from './Component/Navigation';
 import OrderProcessModal from './Component/OrderProcessModal';
+import ProductQuantity from './Component/ProductQuantity';
+import ProductForm from './Component/ProductForm';
+import TodoList from './Component/TodoList';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div className="App">
-      <ProductQuantity />
-      <h3>--------------------------</h3>
-      <OrderProcessModal />
-    </div>
+    <BrowserRouter>
+      <Navigation />
+      <Routes>
+        <Route path="/ex1" element={<OrderProcessModal/>} />
+        <Route path="/ex2" element={<ProductQuantity/>} />
+        <Route path="/ex3" element={<ProductForm />} />
+        <Route path="/ex4" element={<TodoList />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
